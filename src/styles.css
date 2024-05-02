@@ -1,10 +1,158 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.45;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.hero-background {
+  position: relative;
+  background-image: url("/img/ford-ranger_rd5m4t.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 55vh; /* fallback for svh */
+  min-height: 55svh;
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative; /* Make sure content is on top of overlay */
+  z-index: 1;
+  text-align: center;
+  height: 100%;
+  max-width: 40rem;
+  margin: 2rem;
+}
+
+.hero-heading {
+  color: white;
+  font-weight: 700;
+  font-size: 2.375rem;
+  padding-bottom: 1.125rem;
+  line-height: 1.1;
+  transform: translateX(-1rem);
+}
+
+.hero-text {
+  color: white;
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding-bottom: 2.25rem;
+  letter-spacing: -0.0035rem;
+}
+
+.hero-button {
+  color: white;
+  font-weight: 700;
+  background-color: rgb(0, 114, 212);
+  padding: 0.45rem 2.25rem;
+  font-size: 0.875rem;
+  border-radius: 4rem;
+  letter-spacing: -0.025rem;
+}
+
+.cards-container {
+  width: 100%;
+  margin: 0 auto;
+  background: white;
+  padding: 2.5rem 0;
+}
+
+.cards {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5vw;
+  margin: 0 auto;
+  max-width: 51rem;
+  padding: 0 2.5vw;
+}
+
+.card {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 0.5rem -0.125rem rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content {
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card-image {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.card-heading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding-bottom: 0.75rem;
+}
+
+.card-text {
+  padding-right: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 1.125;
+  letter-spacing: -0.0035rem;
+  text-align: justify;
+  text-align-last: left;
+  padding-bottom: 0.75rem;
+}
+
+.card-button {
+  color: white;
+  font-weight: 700;
+  background-color: rgb(0, 114, 212);
+  padding: 0.25rem 2.25rem;
+  font-size: 0.875rem;
+  border-radius: 4rem;
+  letter-spacing: -0.025rem;
+  margin-top: auto;
+}
+
+.card.active {
+  outline: 0.25rem solid rgb(0, 114, 212);
+}
+
+@media (max-width: 768px) {
+  .cards {
+    gap: 2.5rem;
+  }
+
+  .card {
+    grid-column: span 3;
+    width: 90%;
+    max-width: 35rem;
+    margin: 0 auto;
+  }
+
+  .hero-heading {
+    transform: translateX(0rem);
+  }
 }
