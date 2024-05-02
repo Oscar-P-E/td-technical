@@ -79,9 +79,9 @@
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2.5vw;
+  gap: 3rem;
   margin: 0 auto;
-  max-width: 51rem;
+  max-width: 58rem;
   padding: 0 2.5vw;
 }
 
@@ -110,7 +110,7 @@
 .card-heading {
   font-size: 1.125rem;
   font-weight: 700;
-  padding-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
 }
 
 .card-text {
